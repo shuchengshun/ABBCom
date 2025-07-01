@@ -21,32 +21,16 @@ namespace ABBCom
     {
 
         NetworkScanner scanner = null;
-
         static Controller controller;
         static ABB.Robotics.Controllers.RapidDomain.Task _task = null;
-
-
-
-
         static int taskint;
         static int moduleint;
         static int routineint;
-
         RapidData rd;
-
         public string localFilePath; //rapidcode代码内容保存地址
-
-
-
-        //20240125 电机扭矩采集
-       public Timer timerGetTorque;
-       public string axisTorqueSelect; //电机选择
-        
-        
-
-
-
-
+                                     //20240125 电机扭矩采集
+        public Timer timerGetTorque;
+        public string axisTorqueSelect; //电机选择
 
         public Form1()
         {
@@ -60,20 +44,17 @@ namespace ABBCom
             {
                 aa = 200.ToString();
             }
-               
-            
+
+
             timerGetTorque = new Timer();
-            timerGetTorque.Interval =Convert.ToInt16(aa);
+            timerGetTorque.Interval = Convert.ToInt16(aa);
             timerGetTorque.Tick += Timer_Tick;
-       
+
 
 
 
         }
-
-
         //搜素可连接的机器人 20230520
-
         private void scanRobot_Click(object sender, EventArgs e)
         {
 
@@ -95,8 +76,6 @@ namespace ABBCom
                 this.listView1.Items.Add(item);
             }
         }
-
-
         //列表双击连接机器人 20230520
         private void conRobot(object sender, EventArgs e)
         {
@@ -128,21 +107,18 @@ namespace ABBCom
                     timer2.Start();
                 }
 
-            
-             
+
+
             }
 
 
 
         }
-
-
         // 获取坐标 20230520
         private void getPos_Click(object sender, EventArgs e)
         {
             timer1.Start();
         }
-
         //每1s钟获取一次坐标 20230520
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -188,18 +164,13 @@ namespace ABBCom
 
             }
         }
-
-
         //每5s钟获取一次机器人状态 20230623
         private void timer2_Tick(object sender, EventArgs e)
         {
             updateStatus();
         }
-
-
         //每5s钟获取机器人方法20230623
-
-            public void updateStatus()
+        public void updateStatus()
         {
             ControllerState con_states = new ControllerState();
             con_states = controller.State;
@@ -231,9 +202,7 @@ namespace ABBCom
             controlStatus.ForeColor = Color.Blue;
 
         }
-
         //获取机器人当前状态 20230520
-
         private void getStatus_Click(object sender, EventArgs e)
         {
             ControllerState con_states = new ControllerState();
@@ -268,10 +237,7 @@ namespace ABBCom
 
 
         }
-
-
         //电机开启 20230520
-
         private void motorOn_Click(object sender, EventArgs e)
         {
 
@@ -296,8 +262,6 @@ namespace ABBCom
 
 
         }
-
-
         //电机关闭 20230520
         private void motorOff_Click(object sender, EventArgs e)
         {
@@ -318,12 +282,7 @@ namespace ABBCom
                 MessageBox.Show("发生意外" + ex.Message);
             }
         }
-
-
-      
-
         // 获取任务列表 20230609
-
         private void getTask_Click(object sender, EventArgs e)
         {
 
@@ -335,7 +294,6 @@ namespace ABBCom
             }
 
         }
-
         //获取模块列表20230609
         private void listTask_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -350,7 +308,6 @@ namespace ABBCom
 
 
         }
-
         //获取子程序列表20230609
         private void listModule_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -368,9 +325,7 @@ namespace ABBCom
 
 
         }
-
         //获取程序中点位信息 20230609
-
         private void listRoutine_SelectedIndexChanged(object sender, EventArgs e)
         {
             RapidSymbolSearchProperties date = RapidSymbolSearchProperties.CreateDefault();
@@ -400,7 +355,6 @@ namespace ABBCom
 
             }
         }
-
         //获取程序中点坐标具体信息20230609
         private void listPoint_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -453,7 +407,6 @@ namespace ABBCom
             }
 
         }
-
         //写入Target 20230610
         private void writeRobTarget_Click(object sender, EventArgs e)
         {
@@ -504,10 +457,6 @@ namespace ABBCom
 
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
-
-
-
-
         #region
         //日志标签
         #endregion
@@ -528,12 +477,9 @@ namespace ABBCom
                 }
             }
         }
-
-
         #region
         //运行程序标签
         #endregion
-
         // 20230611选择程序运行
         private void startPro_Click(object sender, EventArgs e)
         {
@@ -574,8 +520,6 @@ namespace ABBCom
                 startPro.Enabled = true;
             }
         }
-
-
         //20230611 获取任务列表
         private void getTaskOne_Click(object sender, EventArgs e)
         {
@@ -586,7 +530,6 @@ namespace ABBCom
                 listTaskOne.Items.Add(controller.Rapid.GetTasks()[i].Name);
             }
         }
-
         //20230611获取选中任务的模块
         private void listTaskOne_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -599,14 +542,12 @@ namespace ABBCom
                 listModuleOne.Items.Add(modules[i].Name);
             };
         }
-
         //20230611 显示选择的模块
         private void listModuleOne_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             selectedModule.Text = listModuleOne.SelectedItem.ToString();
         }
-
         //20230611 读取模块内容
         private void readModule_Click(object sender, EventArgs e)
         {
@@ -650,7 +591,6 @@ namespace ABBCom
             rapidCodeValue.Text = text;
             //将模块文件内容显示到textBox4中
         }
-
         //20230611 模块中写入内容
         private void writeModule_Click(object sender, EventArgs e)
         {
@@ -678,16 +618,13 @@ namespace ABBCom
 
             //提示修改成功
         }
-
-
         //20230614 调试测试
         private void button1_Click(object sender, EventArgs e)
         {
-          
-        
+
+
 
         }
-
         //20230614 获取IO信号列表
         private void getIOsignal_Click(object sender, EventArgs e)
         {
@@ -697,12 +634,12 @@ namespace ABBCom
 
             foreach (Signal io in ios)
             {
-              
+
                 ListViewItem item = new ListViewItem(io.Name);
                 item.SubItems.Add(io.Type.ToString());
                 item.SubItems.Add(io.Value.ToString());
                 this.listViewIO.Items.Add(item);
-             
+
             }
 
         }
@@ -712,11 +649,10 @@ namespace ABBCom
             var Units = controller.IOSystem.GetUnits();
             foreach (Unit unit in Units)
             {    //显示扫描到的IO板
-             
+
                 listBoxIOunit.Items.Add("IOBoard:" + unit.Name);
             }
         }
-
         //20230622 获取机器人选项信息
         private void robotOption_Click(object sender, EventArgs e)
         {
@@ -724,12 +660,11 @@ namespace ABBCom
 
             richOption.Text += "系统名:" + controller.RobotWare.Name.ToString() + "\r\n";
             richOption.Text += "RW版本:" + controller.RobotWare.Version.ToString() + "\r\n";
-            foreach(RobotWareOption option in options)
+            foreach (RobotWareOption option in options)
             {
                 richOption.Text += "option:" + option.ToString() + "\r\n";
             }
         }
-
         //20230622 机器人运行时间
         private void runTime_Click(object sender, EventArgs e)
         {
@@ -739,7 +674,6 @@ namespace ABBCom
             richRunTime.Text += "上次开机时间:" + unitServcieInfo.LastStart.ToString() + "小时\r\n";
             richRunTime.Text += "自上次检修后的校准时间:" + unitServcieInfo.ElapsedProductionTimeSinceLastService.TotalHours.ToString() + "小时\r\n";
         }
-
         //20230629 正向移动
         private void btnPlus_Click(object sender, EventArgs e)
         {
@@ -748,12 +682,13 @@ namespace ABBCom
                 string Axis = "Axis1";
                 string angel = moveValue.Text;
                 string movetype = "Movejoint";
-       
+
                 axisMovePositive(Axis, angel, movetype);
                 movePostive();
 
             }
-            else if(radioButton4.Checked){
+            else if (radioButton4.Checked)
+            {
                 string Axis = "Axis2";
                 string angel = moveValue.Text;
                 string movetype = "Movejoint";
@@ -852,7 +787,6 @@ namespace ABBCom
                 movePostive();
             }
         }
-
         //20230629 负向移动
         private void btnMinus_Click(object sender, EventArgs e)
         {
@@ -966,8 +900,6 @@ namespace ABBCom
                 moveNegitive();
             }
         }
-
-
         //20230629 正向移动方法
         public void movePostive()
         {
@@ -981,7 +913,6 @@ namespace ABBCom
                 digitalSignal.Reset();
             }
         }
-
         //20230629  负向移动方法
         public void moveNegitive()
         {
@@ -995,11 +926,9 @@ namespace ABBCom
                 digitalSignal.Reset();
             }
         }
-
         //20230629 轴运动
         // MoveType :Movejoint
-
-        public void axisMovePositive(string axis,string angel,string moveType)
+        public void axisMovePositive(string axis, string angel, string moveType)
         {
             using (Mastership.Request(controller.Rapid))
             {
@@ -1013,31 +942,24 @@ namespace ABBCom
                 movejoint.Fill2(angel);
                 RmoveJoint.Value = movejoint;
 
-                
+
             }
         }
-
-
-
         //20240125 上位机获取扭矩信息
-
         private void Timer_Tick(object sender, EventArgs e)
         {
             torqueOne.Legends.Clear(); //清除图表中的series1，使图表看起来大一点
             RapidData nnum = controller.Rapid.GetRapidData("torqueRead", "Module2", axisTorqueSelect);
-            string f= nnum.Value.ToString();
+            string f = nnum.Value.ToString();
 
             torqueOne.Series[0].Points.Add(Convert.ToDouble(f));
-          
+
             if (torqueOne.Series[0].Points.Count > 100)
             {
                 torqueOne.Series[0].Points.RemoveAt(0);
-             
+
             }
         }
-
-
-
         //20240125 上位机获取扭矩信息
         private void axisTorList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1080,5 +1002,5 @@ namespace ABBCom
         }
     }
 }
-    
-       
+
+

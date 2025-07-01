@@ -37,15 +37,15 @@
   <ItemGroup>
     <Reference Include="ABB.Robotics.Controllers.PC, Version=6.7.7850.130, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\ABB.Robotics.Controllers.PC.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\ABB\SDK\PCSDK 2024\ABB.Robotics.Controllers.PC.dll</HintPath>
     </Reference>
     <Reference Include="RobotStudio.Services.RobApi, Version=6.7.7850.130, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\RobotStudio.Services.RobApi.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\ABB\SDK\PCSDK 2024\RobotStudio.Services.RobApi.dll</HintPath>
     </Reference>
     <Reference Include="RobotStudio.Services.RobApi.Desktop, Version=6.7.7850.130, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\RobotStudio.Services.RobApi.Desktop.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\ABB\SDK\PCSDK 2024\RobotStudio.Services.RobApi.Desktop.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

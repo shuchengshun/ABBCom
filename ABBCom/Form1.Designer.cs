@@ -286,7 +286,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(634, 304);
+            this.label28.Location = new System.Drawing.Point(630, 392);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(257, 12);
             this.label28.TabIndex = 75;
@@ -295,7 +295,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(633, 242);
+            this.label27.Location = new System.Drawing.Point(629, 330);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(221, 12);
             this.label27.TabIndex = 74;
@@ -304,7 +304,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(633, 272);
+            this.label26.Location = new System.Drawing.Point(629, 360);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(281, 12);
             this.label26.TabIndex = 73;
@@ -361,7 +361,7 @@
             this.groupBo4.Controls.Add(this.taskInfo);
             this.groupBo4.Controls.Add(this.numReadValue);
             this.groupBo4.Controls.Add(this.getNum);
-            this.groupBo4.Location = new System.Drawing.Point(338, 222);
+            this.groupBo4.Location = new System.Drawing.Point(334, 310);
             this.groupBo4.Name = "groupBo4";
             this.groupBo4.Size = new System.Drawing.Size(283, 208);
             this.groupBo4.TabIndex = 64;
@@ -493,7 +493,7 @@
             this.groupBox2.Controls.Add(this.showZ);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.showY);
-            this.groupBox2.Location = new System.Drawing.Point(13, 222);
+            this.groupBox2.Location = new System.Drawing.Point(9, 310);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(293, 209);
             this.groupBox2.TabIndex = 63;
@@ -505,7 +505,8 @@
             this.pointInfo.Location = new System.Drawing.Point(6, 20);
             this.pointInfo.Multiline = true;
             this.pointInfo.Name = "pointInfo";
-            this.pointInfo.Size = new System.Drawing.Size(156, 128);
+            this.pointInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.pointInfo.Size = new System.Drawing.Size(156, 180);
             this.pointInfo.TabIndex = 41;
             // 
             // showX
@@ -653,7 +654,8 @@
             this.listPoint.ItemHeight = 12;
             this.listPoint.Location = new System.Drawing.Point(637, 78);
             this.listPoint.Name = "listPoint";
-            this.listPoint.Size = new System.Drawing.Size(202, 136);
+            this.listPoint.ScrollAlwaysVisible = true;
+            this.listPoint.Size = new System.Drawing.Size(202, 220);
             this.listPoint.TabIndex = 40;
             this.listPoint.SelectedIndexChanged += new System.EventHandler(this.listPoint_SelectedIndexChanged);
             // 
@@ -663,7 +665,8 @@
             this.listRoutine.ItemHeight = 12;
             this.listRoutine.Location = new System.Drawing.Point(429, 114);
             this.listRoutine.Name = "listRoutine";
-            this.listRoutine.Size = new System.Drawing.Size(202, 100);
+            this.listRoutine.ScrollAlwaysVisible = true;
+            this.listRoutine.Size = new System.Drawing.Size(202, 184);
             this.listRoutine.TabIndex = 39;
             this.listRoutine.SelectedIndexChanged += new System.EventHandler(this.listRoutine_SelectedIndexChanged);
             // 
@@ -683,7 +686,8 @@
             this.listModule.ItemHeight = 12;
             this.listModule.Location = new System.Drawing.Point(221, 114);
             this.listModule.Name = "listModule";
-            this.listModule.Size = new System.Drawing.Size(202, 100);
+            this.listModule.ScrollAlwaysVisible = true;
+            this.listModule.Size = new System.Drawing.Size(202, 184);
             this.listModule.TabIndex = 38;
             this.listModule.SelectedIndexChanged += new System.EventHandler(this.listModule_SelectedIndexChanged);
             // 
@@ -693,7 +697,8 @@
             this.listTask.ItemHeight = 12;
             this.listTask.Location = new System.Drawing.Point(13, 114);
             this.listTask.Name = "listTask";
-            this.listTask.Size = new System.Drawing.Size(202, 100);
+            this.listTask.ScrollAlwaysVisible = true;
+            this.listTask.Size = new System.Drawing.Size(202, 184);
             this.listTask.TabIndex = 37;
             this.listTask.SelectedIndexChanged += new System.EventHandler(this.listTask_SelectedIndexChanged);
             // 
@@ -717,16 +722,16 @@
             // 
             this.groupBox4.Controls.Add(this.motorOn);
             this.groupBox4.Controls.Add(this.motorOff);
-            this.groupBox4.Location = new System.Drawing.Point(360, 221);
+            this.groupBox4.Location = new System.Drawing.Point(309, 453);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(515, 100);
+            this.groupBox4.Size = new System.Drawing.Size(602, 77);
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "控制";
             // 
             // motorOn
             // 
-            this.motorOn.Location = new System.Drawing.Point(6, 20);
+            this.motorOn.Location = new System.Drawing.Point(6, 31);
             this.motorOn.Name = "motorOn";
             this.motorOn.Size = new System.Drawing.Size(75, 23);
             this.motorOn.TabIndex = 25;
@@ -736,7 +741,7 @@
             // 
             // motorOff
             // 
-            this.motorOff.Location = new System.Drawing.Point(87, 20);
+            this.motorOff.Location = new System.Drawing.Point(87, 31);
             this.motorOff.Name = "motorOff";
             this.motorOff.Size = new System.Drawing.Size(75, 23);
             this.motorOff.TabIndex = 26;
@@ -747,7 +752,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(94, 144);
+            this.label8.Location = new System.Drawing.Point(94, 334);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 12);
             this.label8.TabIndex = 2;
@@ -755,7 +760,7 @@
             // 
             // scanRobot
             // 
-            this.scanRobot.Location = new System.Drawing.Point(13, 138);
+            this.scanRobot.Location = new System.Drawing.Point(13, 328);
             this.scanRobot.Name = "scanRobot";
             this.scanRobot.Size = new System.Drawing.Size(75, 23);
             this.scanRobot.TabIndex = 1;
@@ -776,7 +781,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(13, 22);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(862, 97);
+            this.listView1.Size = new System.Drawing.Size(898, 300);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -824,7 +829,7 @@
             this.groupBox1.Controls.Add(this.RY1);
             this.groupBox1.Controls.Add(this.PZ1);
             this.groupBox1.Controls.Add(this.RX1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 189);
+            this.groupBox1.Location = new System.Drawing.Point(13, 368);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(290, 162);
             this.groupBox1.TabIndex = 22;
@@ -964,7 +969,7 @@
             this.groupBox3.Controls.Add(this.statusTwo);
             this.groupBox3.Controls.Add(this.statusOne);
             this.groupBox3.Controls.Add(this.getStatus);
-            this.groupBox3.Location = new System.Drawing.Point(360, 138);
+            this.groupBox3.Location = new System.Drawing.Point(309, 368);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(290, 68);
             this.groupBox3.TabIndex = 24;
@@ -1035,7 +1040,7 @@
             // 
             this.writeModule.Location = new System.Drawing.Point(17, 498);
             this.writeModule.Name = "writeModule";
-            this.writeModule.Size = new System.Drawing.Size(86, 23);
+            this.writeModule.Size = new System.Drawing.Size(150, 23);
             this.writeModule.TabIndex = 80;
             this.writeModule.Text = "写入";
             this.writeModule.UseVisualStyleBackColor = true;
@@ -1045,7 +1050,7 @@
             // 
             this.readModule.Location = new System.Drawing.Point(17, 469);
             this.readModule.Name = "readModule";
-            this.readModule.Size = new System.Drawing.Size(86, 23);
+            this.readModule.Size = new System.Drawing.Size(150, 23);
             this.readModule.TabIndex = 79;
             this.readModule.Text = "读取";
             this.readModule.UseVisualStyleBackColor = true;
@@ -1064,7 +1069,7 @@
             // 
             this.selectedModule.Location = new System.Drawing.Point(17, 430);
             this.selectedModule.Name = "selectedModule";
-            this.selectedModule.Size = new System.Drawing.Size(100, 21);
+            this.selectedModule.Size = new System.Drawing.Size(150, 21);
             this.selectedModule.TabIndex = 77;
             // 
             // rapidCodeValue
@@ -1678,7 +1683,7 @@
             "轴4电机",
             "轴5电机",
             "轴6电机"});
-            this.axisTorList.Location = new System.Drawing.Point(251, 13);
+            this.axisTorList.Location = new System.Drawing.Point(248, 11);
             this.axisTorList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.axisTorList.Name = "axisTorList";
             this.axisTorList.Size = new System.Drawing.Size(92, 20);
@@ -1717,7 +1722,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(204, 19);
+            this.label47.Location = new System.Drawing.Point(203, 13);
             this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(41, 12);
