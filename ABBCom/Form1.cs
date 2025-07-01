@@ -28,8 +28,8 @@ namespace ABBCom
         static int routineint;
         RapidData rd;
         public string localFilePath; //rapidcode代码内容保存地址
-                                     //20240125 电机扭矩采集
-        public Timer timerGetTorque;
+                                     
+        public Timer timerGetTorque; //20240125 电机扭矩采集
         public string axisTorqueSelect; //电机选择
 
         public Form1()
